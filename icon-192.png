@@ -1,0 +1,166 @@
+// foulee-plan.js — Plan 12 sem (partagé entre app et prototype)
+window.FOULEE_PROGRAM = {
+  targetDistance: 10,
+  targetTime: '1:05:00',
+  targetPace: 9.2,
+  totalWeeks: 12,
+  weeks: [
+    { n: 1, phase: 'Adaptation', focus: 'Construire la base', sessions: [
+      { day: 'Mardi', type: 'END', title: 'Endurance fondamentale', total: 32, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Course aisance', min: 22, kmh: 7.5, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'LNG', title: 'Sortie longue', total: 37, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Course continue', min: 27, kmh: 7.5, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 2, phase: 'Adaptation', focus: 'Allonger le volume', sessions: [
+      { day: 'Mardi', type: 'END', title: 'Endurance + accélérations', total: 37, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Course aisance', min: 20, kmh: 7.8, incline: 1 },
+        { type: 'interval', label: 'Accélération', min: 1, kmh: 9.0, incline: 1, reps: 4, rest: { min: 1, kmh: 6.0 } },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'LNG', title: 'Sortie longue', total: 42, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Course continue', min: 32, kmh: 7.8, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 3, phase: 'Adaptation', focus: 'Intro fractionné', sessions: [
+      { day: 'Mardi', type: 'INT', title: 'Fractionné 30/30', total: 35, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 8, kmh: 6.5, incline: 1 },
+        { type: 'interval', label: '30s vite / 30s lent', min: 0.5, kmh: 10.0, incline: 1, reps: 10, rest: { min: 0.5, kmh: 6.0 } },
+        { type: 'cooldown', label: 'Retour au calme', min: 7, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'LNG', title: 'Sortie longue', total: 45, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Course continue', min: 35, kmh: 8.0, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 4, phase: 'Adaptation', focus: 'Assimilation', sessions: [
+      { day: 'Mardi', type: 'END', title: 'Endurance souple', total: 30, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Course aisance', min: 20, kmh: 7.8, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'LNG', title: 'Sortie longue', total: 40, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Course continue', min: 30, kmh: 8.0, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 5, phase: 'Développement', focus: 'Introduire le tempo', sessions: [
+      { day: 'Mardi', type: 'TEM', title: 'Tempo run', total: 40, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 10, kmh: 6.5, incline: 1 },
+        { type: 'run', label: 'Tempo seuil', min: 20, kmh: 8.8, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 10, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'LNG', title: 'Sortie longue progressive', total: 48, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Base aisance', min: 25, kmh: 8.0, incline: 1 },
+        { type: 'run', label: 'Finish progressif', min: 13, kmh: 8.8, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 6, phase: 'Développement', focus: 'Intervalles 1 min', sessions: [
+      { day: 'Mardi', type: 'INT', title: 'Fractionné 1 min', total: 40, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 10, kmh: 6.5, incline: 1 },
+        { type: 'interval', label: '1 min rapide / 1 min récup', min: 1, kmh: 10.5, incline: 1, reps: 8, rest: { min: 1, kmh: 6.0 } },
+        { type: 'cooldown', label: 'Retour au calme', min: 8, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'LNG', title: 'Sortie longue', total: 52, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Course continue', min: 42, kmh: 8.2, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 7, phase: 'Développement', focus: 'Tempo + volume', sessions: [
+      { day: 'Mardi', type: 'TEM', title: 'Tempo long', total: 45, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 10, kmh: 6.5, incline: 1 },
+        { type: 'run', label: 'Tempo seuil', min: 25, kmh: 9.0, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 10, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'LNG', title: 'Sortie longue', total: 55, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Course continue', min: 45, kmh: 8.4, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 8, phase: 'Développement', focus: 'Test 5 km', sessions: [
+      { day: 'Mardi', type: 'END', title: 'Endurance active', total: 35, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Course aisance', min: 25, kmh: 8.2, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'TST', title: 'Test 5 km chrono', total: 45, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 12, kmh: 6.5, incline: 1 },
+        { type: 'run', label: '5 km en effort', min: 33, kmh: 9.2, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 8, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 9, phase: 'Spécifique', focus: 'Allure 10 km', sessions: [
+      { day: 'Mardi', type: 'INT', title: '3 × 1500 m allure course', total: 45, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 10, kmh: 6.5, incline: 1 },
+        { type: 'interval', label: '1500 m allure course', min: 10, kmh: 9.2, incline: 1, reps: 3, rest: { min: 2, kmh: 6.0 } },
+        { type: 'cooldown', label: 'Retour au calme', min: 9, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'LNG', title: 'Sortie longue à allure', total: 60, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 8, kmh: 6.5, incline: 1 },
+        { type: 'run', label: 'Base aisance', min: 25, kmh: 8.4, incline: 1 },
+        { type: 'run', label: 'Finish allure course', min: 20, kmh: 9.0, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 7, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 10, phase: 'Spécifique', focus: 'VMA + tempo', sessions: [
+      { day: 'Mardi', type: 'INT', title: '6 × 800 m VMA', total: 45, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 10, kmh: 6.5, incline: 1 },
+        { type: 'interval', label: '800 m rapide', min: 4.5, kmh: 10.5, incline: 1, reps: 6, rest: { min: 2, kmh: 6.0 } },
+        { type: 'cooldown', label: 'Retour au calme', min: 8, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'LNG', title: 'Sortie longue 10 km', total: 65, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 8, kmh: 6.5, incline: 1 },
+        { type: 'run', label: '10 km allure aisance+', min: 52, kmh: 8.8, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 11, phase: 'Spécifique', focus: 'Affûtage', sessions: [
+      { day: 'Mardi', type: 'TEM', title: 'Tempo court piquant', total: 38, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 10, kmh: 6.5, incline: 1 },
+        { type: 'run', label: 'Tempo objectif', min: 15, kmh: 9.4, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 13, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'END', title: 'Pré-compétition', total: 35, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 8, kmh: 6.5, incline: 1 },
+        { type: 'run', label: 'Allure course détendue', min: 15, kmh: 9.0, incline: 1 },
+        { type: 'interval', label: 'Lignes droites', min: 0.25, kmh: 12.0, incline: 1, reps: 4, rest: { min: 1, kmh: 6.0 } },
+        { type: 'cooldown', label: 'Retour au calme', min: 7, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+    { n: 12, phase: 'Spécifique', focus: 'Semaine de test', sessions: [
+      { day: 'Mardi', type: 'END', title: 'Activation légère', total: 25, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 5, kmh: 6.0, incline: 1 },
+        { type: 'run', label: 'Aisance + accélérations', min: 15, kmh: 8.0, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 5, kmh: 5.5, incline: 0 },
+      ]},
+      { day: 'Samedi', type: 'TST', title: '🏁 Test 10 km chrono', total: 75, blocks: [
+        { type: 'warmup', label: 'Échauffement', min: 12, kmh: 6.5, incline: 1 },
+        { type: 'run', label: '10 km en effort', min: 65, kmh: 9.2, incline: 1 },
+        { type: 'cooldown', label: 'Retour au calme', min: 8, kmh: 5.5, incline: 0 },
+      ]},
+    ]},
+  ],
+};
+
+window.FOULEE_BADGES = [
+  { id: 'first',   emoji: '🎯', name: 'Premier km',     req: (s) => s.sessionsDone >= 1 },
+  { id: 'streak3', emoji: '🔥', name: 'Série de 3',     req: (s) => s.streak >= 3 },
+  { id: 'tempo',   emoji: '⚡', name: 'Tempo maître',    req: (s) => s.sessionsDone >= 8 },
+  { id: 'phase2',  emoji: '🌀', name: 'Phase 2 lancée', req: (s) => s.currentWeek >= 5 },
+  { id: 'test5k',  emoji: '🏁', name: 'Test 5 km',      req: (s) => s.currentWeek > 8 },
+  { id: 'test10k', emoji: '🏆', name: 'Finisher 10 km', req: (s) => s.currentWeek > 12 },
+];
